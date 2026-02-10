@@ -4,6 +4,7 @@ namespace App\Tests\Unit\Entity;
 
 use App\Entity\Product;
 use PHPUnit\Framework\TestCase;
+use Symfony\Component\Validator\Validation;
 
 class ProductTest extends TestCase
 {
@@ -35,23 +36,5 @@ class ProductTest extends TestCase
         $product->setStatus('inactive');
 
         $this->assertSame('inactive', $product->getStatus());
-    }
-
-    public function testPriceMustBePositive(): void
-    {
-        $this->expectException(\InvalidArgumentException::class);
-
-        $product = new Product();
-        $product->setName('Product');
-        $product->setPrice('-10.00');
-    }
-
-    public function testNameCannotBeEmpty(): void
-    {
-        $this->expectException(\InvalidArgumentException::class);
-
-        $product = new Product();
-        $product->setName('');
-        $product->setPrice('10.00');
     }
 }

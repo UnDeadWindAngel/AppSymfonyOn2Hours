@@ -1,0 +1,51 @@
+
+###> symfony/framework-bundle ###
+/.env
+/.env.local
+/.env.local.php
+/.env.*.local
+/.env.test
+/.env.test.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> Docker  ###
+/docker/data/
+docker/.data
+docker/.mysql
+docker/.postgres
+###< Docker  ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+/.phpunit.cache/
+###< phpunit/phpunit ###
+
+###> IDE  ###
+/.idea
+/.vscode
+*.swp
+###< IDE  ###
+
+###> Composer  ###
+composer.phar
+composer.lock
+###< Composer  ###
+
+###> Tests   ###
+/coverage
+.phpunit.result.cache
+###< Tests   ###
+
+###> OS   ###
+.DS_Store
+EOF
+###< OS   ###
+
+###> symfony/asset-mapper ###
+/public/assets/
+/assets/vendor/
+###< symfony/asset-mapper ###
